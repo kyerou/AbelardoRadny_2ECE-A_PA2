@@ -27,9 +27,14 @@ To compute the standard deviation, I used .std():
 STD = X.std() #getting the standard deviation from variable X and storing it to variable STD
 ```
 
-Now since I have all of the things I need to compute for the normalization, I  used the formula: 
+Now, since I have all of the things I need to compute for the normalization, I  used the formula: 
 
+<img width="117" height="69" alt="Image" src="https://github.com/user-attachments/assets/83817f04-97ea-439c-9db9-ca2521fd5d2d" />
+
+Translating it to ,Python which was:
+```python
 Z = (X-M)/STD #solving the normalization using the formula and saving it to the variable Z
+```
 np.save("X_normalized.nyp", Z) #saving the normalization code into a numpy file
 print("Normal Array:\n", X)
 print("Normalized Array:\n", Z) #printing both the random normal array and the normalized array
