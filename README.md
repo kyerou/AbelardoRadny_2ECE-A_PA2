@@ -46,14 +46,33 @@ print("Normal Array:\n", X)
 print("Normalized Array:\n", Z) #printing both the random normal array and the normalized array
 ```
 
-Divisible by 3
+# Divisible by 3
+The task for this was to make a 10x10 ndarray that is square, then determine the values that are divisible by 3.
 
+First was to make an array that contains numbers from 1-100
 ``` python
 A=np.arange(1,101) #getting an array with the elements of 1-100 and storing it in the variable A
-np.shape(A) #loading the shape of the array A
+```
+
+Next was to reshape the array into a 10x10 using .reshape()
+```python
+np.shape(A) #loading the shape of the array A (this is necessary to do first before reshaping it)
 square=A.reshape(10,10)**2 #reshaping array A into a 10x10 array and squaring each and every element inside the array, storing it to variable square
-divisible_by_3 = square[square%3 == 0] #taking all of the variables ofthe  array square and looking for every element divisible by 3 using modulo, storing it to the variable divisible_by_3
+```
+In the same line of code, I already squared the results inside the 10x10 array using the arithmetic **2
+
+Now to get the divisible by 3, I used the modulo (%) arithmetic, then equating the results to zero to showcase the values that have 0 as a result of modulo 3:
+```python
+divisible_by_3 = square[square%3 == 0] #taking all of the variables of the  array square and looking for every element divisible by 3 using modulo, storing it to the variable divisible_by_3
+```
+
+Saving the divisible by 3 variable into a numby file:
+```python
 np.save("div_by_3.npy", divisible_by_3) #saving the code of divisible_by_3 into a numpy file
+```
+
+To check if it was all correct, I used print() to see the results:
+```python
 print("10x10 array: \n", square)
 print("Numbers divisible by 3:\n", divisible_by_3) #printing both the squared 10x10 array and the array with the elements divisible by 3
 ```
