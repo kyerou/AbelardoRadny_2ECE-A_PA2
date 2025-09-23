@@ -2,7 +2,7 @@
 
 Numpy
 
-This problem assignment made us use numpy to complete certain tasks for this assignment.
+This problem assignment made us use numpy to complete tasks for this assignment. Numpy can be used to create arrays that can be changed and manipulated to get certain results if needed.
 
 # NORMALIZATION
 This problem made us create a 5x5 ndarray and find its normalization using the code for mean '.mean()', and standard deviation '.std()'
