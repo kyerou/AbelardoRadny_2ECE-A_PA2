@@ -2,12 +2,12 @@
 
 Numpy
 
-This problem assignment made us use numpy to complete certain task for this assignment.
+This problem assignment made us use numpy to complete certain tasks for this assignment.
 
 # NORMALIZATION
 This problem made us create a 5x5 ndarray and find its normalization using the code for mean '.mean()', and standard deviation '.std()'
 
-First we import numpy
+First, we import numpy
 ``` python
 import numpy as np #Importing numpy to the code
 ```
@@ -31,11 +31,17 @@ Now, since I have all of the things I need to compute for the normalization, I  
 
 <img width="117" height="69" alt="Image" src="https://github.com/user-attachments/assets/83817f04-97ea-439c-9db9-ca2521fd5d2d" />
 
-Translating it to ,Python which was:
+Translating it to python, which was:
 ```python
 Z = (X-M)/STD #solving the normalization using the formula and saving it to the variable Z
 ```
+Now, to save a certain variable into a numpy file, I used np.save():
+```python
 np.save("X_normalized.nyp", Z) #saving the normalization code into a numpy file
+```
+
+Lastly, to check if it was correct, I printed the original ndarray and now the normalized ndarray using print():
+```python
 print("Normal Array:\n", X)
 print("Normalized Array:\n", Z) #printing both the random normal array and the normalized array
 ```
