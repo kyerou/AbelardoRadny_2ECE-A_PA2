@@ -1,12 +1,34 @@
-# AbelardoRadny_2ECE-A_PA2
+# ECE2112 PA2
 
-NORMALIZATION
+Numpy
 
+This problem assignment made us use numpy to complete certain task for this assignment.
+
+# NORMALIZATION
+This problem made us create a 5x5 ndarray and find its normalization using the code for mean '.mean()', and standard deviation '.std()'
+
+First we import numpy
 ``` python
 import numpy as np #Importing numpy to the code
+```
+Now create a 5x5 ndarray with random numbers:
+```python
 X = np.random.random((5,5)) #creating a random 5x5 array and storing it to variable X
-M = X.mean() #getting the mean from variable X and storing it to variable M
+```
+random.random sends out random values into the ndarray
+
+To compute the mean, I used .mean():
+```python
+M = X.mean() #getting the mean from variable X and storing it in variable M
+```
+
+To compute the standard deviation, I used .std():
+```python
 STD = X.std() #getting the standard deviation from variable X and storing it to variable STD
+```
+
+Now since I have all of the things I need to compute for the normalization, I  used the formula: 
+
 Z = (X-M)/STD #solving the normalization using the formula and saving it to the variable Z
 np.save("X_normalized.nyp", Z) #saving the normalization code into a numpy file
 print("Normal Array:\n", X)
